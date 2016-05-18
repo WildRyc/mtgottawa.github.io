@@ -166,6 +166,13 @@
 				localStorage.setItem("lifetime", JSON.stringify(lifetimeData));
 				buildLifetime(lifetimeData);
 				console.log(lifetimeData);
+			}).fail(function () {
+				if(!lifetimeExists){
+					if(currentExists){
+						buildLifetime(currentData);
+						localStorage.setItem("lifetime", JSON.stringify(currentData));
+					}
+				}
 			});
 
 			$.ajax({
@@ -187,10 +194,6 @@
 			});
 
 			function buildCurrent(data) {
-				console.log(name + "Table");
-				console.log($("#" + name + "Table"));
-				console.log(data);
-				//currentTable.destroy();
 				currentTable = $("#currentTable").DataTable({
 					columns: [
 						{ data: "name" },
@@ -207,7 +210,21 @@
 			}
 			
 			function buildLifetime(data) {
-				
+				if(! spentExists){
+					lifetimeTable = $("#lifetimeTable").DataTable({
+						columns: [
+							{ data: "name" },
+							{ data: "matchPoints" },
+							{ data: "leaguePoints" },
+							{ data: "firstPlaceFinishes" },
+							{ data: "leagueTotal" }
+						],
+						data: data,
+						dataType: "json",
+						destroy: true,
+						order: [[ 4, "desc" ]]
+					});
+				}
 			}
 			
 		</script>
