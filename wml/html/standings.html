@@ -99,6 +99,7 @@
 			var spentData = [];
 			var spentExists = false;
 			
+			/*
 			var currentTable = $("#currentTable").DataTable({
 				order: [[ 4, "desc" ]],
 				paging: false
@@ -108,11 +109,11 @@
 				order: [[ 4, "desc" ]],
 				paging: false
 			});
+			*/
 			
 			if (localStorage.getItem("current") !== null) {
 				currentExists = true;
 				currentData = JSON.parse(localStorage.getItem("current")); 
-				buildCurrent(currentData);
 			}
 			
 			if (localStorage.getItem("spent") !== null) {
@@ -123,7 +124,6 @@
 			if (localStorage.getItem("lifetime") !== null) {
 				lifetimeExists = true;
 				lifetimeData = JSON.parse(localStorage.getItem("lifetime")); 
-				buildLifetime(lifetimeData);
 			}
 			
 			$.ajax({
@@ -145,6 +145,10 @@
 				localStorage.setItem("current", JSON.stringify(currentData));
 				buildCurrent(currentData);
 				console.log(currentData);
+			}).fail(function () {
+				if (currentExists) {
+					buildCurrent(currentData);	
+				}
 			});
 
 			$.ajax({
