@@ -92,6 +92,9 @@
 			var spent = [];
 			var spentExists = false;
 
+			var currentTable = $("#currentTable");
+			var lifetimeTable = $("#lifetimeTable");
+
 			if (localStorage.getItem("current") !== null) {
 				currentExists = true;
 			}
@@ -173,16 +176,19 @@
 				console.log(name + "Table");
 				console.log($("#" + name + "Table"));
 				console.log(data);
+				$("#" + name + "Table").destory();
+				$("#" + name).append(currentTable);
 				$("#" + name + "Table").DataTable({
-					data: data,
-					dataType: "json",
 					columns: [
 						{ data: "name" },
 						{ data: "matchPoints" },
 						{ data: "leaguePoints" },
 						{ data: "firstPlaceFinishes" },
 						{ data: "leagueTotal" }
-					]
+					],
+					data: data,
+					dataType: "json",
+					order: [[ 4, "desc" ]]
 				});
 			}
 		</script>
