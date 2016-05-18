@@ -191,7 +191,8 @@
 				console.log($("#" + name + "Table"));
 				console.log(data);
 				currentTable.destroy();
-				currentTable.DataTable({
+				/*
+				currentTable = $("#currentTable").DataTable({
 					columns: [
 						{ data: "name" },
 						{ data: "matchPoints" },
@@ -203,6 +204,7 @@
 					dataType: "json",
 					order: [[ 4, "desc" ]]
 				});
+				*/
 			}
 			
 			function buildLifetime(data) {
