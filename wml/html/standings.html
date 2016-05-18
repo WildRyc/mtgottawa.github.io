@@ -174,8 +174,14 @@
 				console.log($("#" + name + "Table"));
 				console.log(data);
 				$("#" + name + "Table").DataTable({
-					data: data
-
+					data: data,
+					columns: [
+						{ data: "name" },
+						{ data: "matchPoints" },
+						{ data: "leaguePoints" },
+						{ data: "firstPlaceFinishes" },
+						{ data: "leagueTotal" }
+					]
 				});
 			}
 		</script>
