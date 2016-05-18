@@ -133,7 +133,7 @@
 			}).done(function (data) {
 				currentData = [];
 				standingsCurrent = data.getElementsByTagName("Team");
-				for (var i = 0; i < standings.length; i++) {
+				for (var i = 0; i < standingsCurrent.length; i++) {
 					currentData.push({
 						"name": $(standingsCurrent[i]).attr("Name"),
 						"matchPoints": $(standingsCurrent[i]).attr("MatchPoints"),
@@ -154,7 +154,7 @@
 			}).done(function (data) {
 				lifetimeData = [];
 				standingsLifetime = data.getElementsByTagName("Team");
-				for (var i = 0; i < standings.length; i++) {
+				for (var i = 0; i < standingsLifetime.length; i++) {
 					lifetimeData.push({
 						"name": $(standingsLifetime[i]).attr("Name"),
 						"matchPoints": $(standingsLifetime[i]).attr("MatchPoints"),
