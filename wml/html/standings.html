@@ -57,6 +57,7 @@
 			</ul>
 			<div class="tab-content">
 				<div role="tabpanel" class="tab-pane active" id="current">
+					<br />
 					<table id="currentTable" class="table table-striped table-bordered table-hover table-condensed table-responsive" style="width: 100%;">
 						<thead>
 							<tr>
@@ -126,7 +127,7 @@
 						"firstPlaceFinishes": $(standings[i]).attr("FirstPlaceFinishes")
 					});
 				}
-				localStorage.setItem("current", JSON.toString(current));
+				localStorage.setItem("current", JSON.stringify(current));
 				buildTable("current", current);
 				console.log(standings);
 			});
@@ -146,7 +147,7 @@
 						"firstPlaceFinishes": $(standings[i]).attr("FirstPlaceFinishes")
 					});
 				}
-				localStorage.setItem("lifetime", JSON.toString(lifetime));
+				localStorage.setItem("lifetime", JSON.stringify(lifetime));
 				buildTable("lifetime", lifetime);
 				console.log(lifetime);
 			});
@@ -163,12 +164,14 @@
 						"spentPoints": $(standings[i]).attr("SpentPoints")
 					});
 				}
-				localStorage.setItem("spent", JSON.toString(spent));
+				localStorage.setItem("spent", JSON.stringify(spent));
 				buildTable("lifetime", lifetime);
 				console.log(spent);
 			});
 
 			function buildTable(name, data) {
+				console.log(name + "Table");
+				console.log($(name + "Table"));
 				console.log(data);
 				$(name + "Table").DataTable({
 					data: data
