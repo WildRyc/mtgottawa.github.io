@@ -171,9 +171,9 @@
 
 			function buildTable(name, data) {
 				console.log(name + "Table");
-				console.log($(name + "Table"));
+				console.log($("#" + name + "Table"));
 				console.log(data);
-				$(name + "Table").DataTable({
+				$("#" + name + "Table").DataTable({
 					data: data
 				});
 			}
