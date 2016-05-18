@@ -67,13 +67,14 @@
 		<script src="../lib/dataTables/js/jquery.dataTables.min.js"></script>
 		<script src="../lib/dataTables/js/dataTables.bootstrap.min.js"></script>
 		<script>
-			var data;
+			var data, standings;
 			$.ajax({
 				data: data,
 				dataType: "xml",
 				url: "../assets/xml/standings.xml"
 			}).done(function (data) {
-				console.log(data);
+				standings = data;
+				console.log(standings);
 			});
 		</script>
 	</body>
