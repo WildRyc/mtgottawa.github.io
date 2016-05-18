@@ -1,209 +1,209 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
-	<title>Points - Westboro Magic League</title>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="../lib/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet">
-	<link href="../lib/bootstrap-3.3.6/css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="../lib/dataTables/css/dataTables.bootstrap.min.css" rel="stylesheet" />
-	<link href="../assets/css/carousel.css" rel="stylesheet">
 	<head>
-		<body>
-			<div class="navbar-wrapper">
-				<div class="container">
-					<nav class="navbar navbar-inverse navbar-static-top">
-						<div class="container">
-							<div class="navbar-header">
-								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-									<span class="sr-only">Toggle navigation</span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-								</button>
-								<a class="navbar-brand" href="index.html">Westboro Magic League</a>
-							</div>
-							<div id="navbar" class="navbar-collapse collapse">
-								<ul class="nav navbar-nav">
-									<li><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-									<li class="active"><a href="points.html"><span class="glyphicon glyphicon-piggy-bank"></span> Points</a></li>
-									<li><a href="standings.html"><span class="glyphicon glyphicon-list-alt"></span> Standings</a></li>
-									<li><a href="playoffs.html"><span class="glyphicon glyphicon-king"></span> Playoffs and Champions</a></li>
-								</ul>
-							</div>
-						</div>
-					</nav>
-				</div>
-			</div>
-			<div id="bannerCarousel" class="carousel slide" data-ride="carousel">
-				<div class="carousel-inner" role="listbox">
-					<div class="item active">
-						<img class="first-slide" src="../assets/images/mtgcardback.jpg" alt="First slide">
-						<div class="container">
-							<div class="carousel-caption">
-								<h1>Westboro Magic League</h1>
-								<p>1v1 Elder Dragon Highlander using the French Banlist</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+		<title>Points - Westboro Magic League</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="../lib/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet">
+		<link href="../lib/bootstrap-3.3.6/css/bootstrap-theme.min.css" rel="stylesheet">
+		<link href="../lib/dataTables/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+		<link href="../assets/css/carousel.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="navbar-wrapper">
 			<div class="container">
-				<h2>League Points (LPs)</h2>
-				<ul class="nav nav-tabs" role="tablist">
-					<li role="presentation" class="active"><a href="#earn" aria-controls="earn" role="tab" data-toggle="tab">Earn</a></li>
-					<li role="presentation"><a href="#redeem" aria-controls="redeem" role="tab" data-toggle="tab">Redeem</a></li>
-				</ul>
-				<div class="tab-content">
-					<div role="tabpanel" class="tab-pane active" id="earn">
-						<h4>Earning League Points (LPs)</h4>
-						<table class="table table-striped table-bordered table-hover table-condensed table-responsive" style="width: 100%;">
-							<thead>
-								<tr>
-									<td><strong>Achievement</strong></td>
-									<td><strong>LPs</strong></td>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Win a match</td>
-									<td>3</td>
-								</tr>
-								<tr>
-									<td>Draw a match</td>
-									<td>1</td>
-								</tr>
-								<tr>
-									<td>Play in an event*</td>
-									<td>1</td>
-								</tr>
-								<tr>
-									<td>Win 3 matches*</td>
-									<td>2</td>
-								</tr>
-								<tr>
-									<td>Defeat the Elder Dragon*</td>
-									<td>1</td>
-								</tr>
-							</tbody>
-						</table>
-						<p>*You can only earn these achievements once per event</p>
+				<nav class="navbar navbar-inverse navbar-static-top">
+					<div class="container">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="index.html">Westboro Magic League</a>
+						</div>
+						<div id="navbar" class="navbar-collapse collapse">
+							<ul class="nav navbar-nav">
+								<li><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+								<li class="active"><a href="points.html"><span class="glyphicon glyphicon-piggy-bank"></span> Points</a></li>
+								<li><a href="standings.html"><span class="glyphicon glyphicon-list-alt"></span> Standings</a></li>
+								<li><a href="playoffs.html"><span class="glyphicon glyphicon-king"></span> Playoffs and Champions</a></li>
+							</ul>
+						</div>
 					</div>
-					<div role="tabpanel" class="tab-pane" id="redeem">
-						<h4>Redeeming League Points (LPs)</h4>
-						<table class="table table-striped table-bordered table-hover table-condensed table-responsive" style="width: 100%;">
-							<thead>
-								<tr>
-									<td><strong>Prizes</strong></td>
-									<td><strong>LPs</strong></td>
-									<td><strong>Stock</strong></td>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Gatecrash Booster Pack</td>
-									<td>5</td>
-									<td>1</td>
-								</tr>
-								<tr>
-									<td>Magic 2012 Booster Pack</td>
-									<td>5</td>
-									<td>2</td>
-								</tr>
-								<tr>
-									<td>Magic 2014 Booster Pack</td>
-									<td>5</td>
-									<td>2</td>
-								</tr>
-								<tr>
-									<td>Theros Booster Pack</td>
-									<td>5</td>
-									<td>2</td>
-								</tr>
-								<tr>
-									<td>Khans of Tarkir Booster Pack</td>
-									<td>5</td>
-									<td>1</td>
-								</tr>
-								<tr>
-									<td>Dark Ascension Booster Pack</td>
-									<td>5</td>
-									<td>1</td>
-								</tr>
-								<tr>
-									<td>Dragons of Tarkir Booster Pack</td>
-									<td>4</td>
-									<td>13</td>
-								</tr>
-								<tr>
-									<td>Oath of the Gatewatch Booster Pack</td>
-									<td>3</td>
-									<td>8</td>
-								</tr>
-								<tr>
-									<td>Shadows over Innistrad Booster Pack</td>
-									<td>4</td>
-									<td>36</td>
-								</tr>
-								<tr>
-									<td>Return to Ravnica Booster Pack</td>
-									<td>7</td>
-									<td>1</td>
-								</tr>
-								<tr>
-									<td>Weekly League Fee</td>
-									<td>8</td>
-									<td>n/a</td>
-								</tr>
-								<tr>
-									<td>Avacyn Restored Booster Pack</td>
-									<td>8</td>
-									<td>7</td>
-								</tr>
-								<tr>
-									<td>Mirrodin Besieged Booster Pack</td>
-									<td>10</td>
-									<td>13</td>
-								</tr>
-								<tr>
-									<td>Innistrad Booster Pack</td>
-									<td>14</td>
-									<td>5</td>
-								</tr>
-								<tr>
-									<td>Monthly Tournament Fee</td>
-									<td>16</td>
-									<td>n/a</td>
-								</tr>
-								<tr>
-									<td>From the Vault: Annhilation</td>
-									<td>89</td>
-									<td>1</td>
-								</tr>
-								<tr>
-									<td>From the Vault: Relics</td>
-									<td>299</td>
-									<td>1</td>
-								</tr>
-							</tbody>
-						</table>
-						<p>League Points can be redeemed from the opening of registration until the end of the final round of the tournament</p>
-						<p>Only 50% of LP's earned during a season will be carried over to future seasons</p>
+				</nav>
+			</div>
+		</div>
+		<div id="bannerCarousel" class="carousel slide" data-ride="carousel">
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					<img class="first-slide" src="../assets/images/mtgcardback.jpg" alt="First slide">
+					<div class="container">
+						<div class="carousel-caption">
+							<h1>Westboro Magic League</h1>
+							<p>1v1 Elder Dragon Highlander using the French Banlist</p>
+						</div>
 					</div>
 				</div>
 			</div>
-			<script src="../lib/jquery/jquery-2.2.3.min.js"></script>
-			<script src="../lib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
-			<script src="../lib/dataTables/js/jquery.dataTables.min.js"></script>
-			<script src="../lib/dataTables/js/dataTables.bootstrap.min.js"></script>
-			<script>
-				$('table').DataTable({
-					info: false,
-					order: [[ 1, "asc" ]],
-					paging: false,
-					searching: false
-				});
-			</script>
-		</body>
+		</div>
+		<div class="container">
+			<h2>League Points (LPs)</h2>
+			<ul class="nav nav-tabs" role="tablist">
+				<li role="presentation" class="active"><a href="#earn" aria-controls="earn" role="tab" data-toggle="tab">Earn</a></li>
+				<li role="presentation"><a href="#redeem" aria-controls="redeem" role="tab" data-toggle="tab">Redeem</a></li>
+			</ul>
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane active" id="earn">
+					<h4>Earning League Points (LPs)</h4>
+					<table class="table table-striped table-bordered table-hover table-condensed table-responsive" style="width: 100%;">
+						<thead>
+							<tr>
+								<td><strong>Achievement</strong></td>
+								<td><strong>LPs</strong></td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Win a match</td>
+								<td>3</td>
+							</tr>
+							<tr>
+								<td>Draw a match</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>Play in an event*</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>Win 3 matches*</td>
+								<td>2</td>
+							</tr>
+							<tr>
+								<td>Defeat the Elder Dragon*</td>
+								<td>1</td>
+							</tr>
+						</tbody>
+					</table>
+					<p>*You can only earn these achievements once per event</p>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="redeem">
+					<h4>Redeeming League Points (LPs)</h4>
+					<table class="table table-striped table-bordered table-hover table-condensed table-responsive" style="width: 100%;">
+						<thead>
+							<tr>
+								<td><strong>Prizes</strong></td>
+								<td><strong>LPs</strong></td>
+								<td><strong>Stock</strong></td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Gatecrash Booster Pack</td>
+								<td>5</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>Magic 2012 Booster Pack</td>
+								<td>5</td>
+								<td>2</td>
+							</tr>
+							<tr>
+								<td>Magic 2014 Booster Pack</td>
+								<td>5</td>
+								<td>2</td>
+							</tr>
+							<tr>
+								<td>Theros Booster Pack</td>
+								<td>5</td>
+								<td>2</td>
+							</tr>
+							<tr>
+								<td>Khans of Tarkir Booster Pack</td>
+								<td>5</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>Dark Ascension Booster Pack</td>
+								<td>5</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>Dragons of Tarkir Booster Pack</td>
+								<td>4</td>
+								<td>13</td>
+							</tr>
+							<tr>
+								<td>Oath of the Gatewatch Booster Pack</td>
+								<td>3</td>
+								<td>8</td>
+							</tr>
+							<tr>
+								<td>Shadows over Innistrad Booster Pack</td>
+								<td>4</td>
+								<td>36</td>
+							</tr>
+							<tr>
+								<td>Return to Ravnica Booster Pack</td>
+								<td>7</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>Weekly League Fee</td>
+								<td>8</td>
+								<td>n/a</td>
+							</tr>
+							<tr>
+								<td>Avacyn Restored Booster Pack</td>
+								<td>8</td>
+								<td>7</td>
+							</tr>
+							<tr>
+								<td>Mirrodin Besieged Booster Pack</td>
+								<td>10</td>
+								<td>13</td>
+							</tr>
+							<tr>
+								<td>Innistrad Booster Pack</td>
+								<td>14</td>
+								<td>5</td>
+							</tr>
+							<tr>
+								<td>Monthly Tournament Fee</td>
+								<td>16</td>
+								<td>n/a</td>
+							</tr>
+							<tr>
+								<td>From the Vault: Annhilation</td>
+								<td>89</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>From the Vault: Relics</td>
+								<td>299</td>
+								<td>1</td>
+							</tr>
+						</tbody>
+					</table>
+					<p>League Points can be redeemed from the opening of registration until the end of the final round of the tournament</p>
+					<p>Only 50% of LP's earned during a season will be carried over to future seasons</p>
+				</div>
+			</div>
+		</div>
+		<script src="../lib/jquery/jquery-2.2.3.min.js"></script>
+		<script src="../lib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+		<script src="../lib/dataTables/js/jquery.dataTables.min.js"></script>
+		<script src="../lib/dataTables/js/dataTables.bootstrap.min.js"></script>
+		<script>
+			$('table').DataTable({
+				info: false,
+				order: [[ 1, "asc" ]],
+				paging: false,
+				searching: false
+			});
+		</script>
+	</body>
 </html>

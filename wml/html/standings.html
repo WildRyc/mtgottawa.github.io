@@ -1,64 +1,80 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
-	<title>Standings - Westboro Magic League</title>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="../lib/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet">
-	<link href="../lib/bootstrap-3.3.6/css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="../assets/css/carousel.css" rel="stylesheet">
 	<head>
-		<body>
-			<div class="navbar-wrapper">
-				<div class="container">
-					<nav class="navbar navbar-inverse navbar-static-top">
-						<div class="container">
-							<div class="navbar-header">
-								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-									<span class="sr-only">Toggle navigation</span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-								</button>
-								<a class="navbar-brand" href="index.html">Westboro Magic League</a>
-							</div>
-							<div id="navbar" class="navbar-collapse collapse">
-								<ul class="nav navbar-nav">
-									<li><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-									<li><a href="points.html"><span class="glyphicon glyphicon-piggy-bank"></span> Points</a></li>
-									<li class="active"><a href="standings.html"><span class="glyphicon glyphicon-list-alt"></span> Standings</a></li>
-									<li><a href="playoffs.html"><span class="glyphicon glyphicon-king"></span> Playoffs and Champions</a></li>
-								</ul>
-							</div>
+		<title>Standings - Westboro Magic League</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="../lib/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet">
+		<link href="../lib/bootstrap-3.3.6/css/bootstrap-theme.min.css" rel="stylesheet">
+		<link href="../lib/dataTables/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+		<link href="../assets/css/carousel.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="navbar-wrapper">
+			<div class="container">
+				<nav class="navbar navbar-inverse navbar-static-top">
+					<div class="container">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="index.html">Westboro Magic League</a>
 						</div>
-					</nav>
-				</div>
+						<div id="navbar" class="navbar-collapse collapse">
+							<ul class="nav navbar-nav">
+								<li><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+								<li><a href="points.html"><span class="glyphicon glyphicon-piggy-bank"></span> Points</a></li>
+								<li class="active"><a href="standings.html"><span class="glyphicon glyphicon-list-alt"></span> Standings</a></li>
+								<li><a href="playoffs.html"><span class="glyphicon glyphicon-king"></span> Playoffs and Champions</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
 			</div>
-			<div id="bannerCarousel" class="carousel slide" data-ride="carousel">
-				<div class="carousel-inner" role="listbox">
-					<div class="item active">
-						<img class="first-slide" src="../assets/images/mtgcardback.jpg" alt="First slide">
-						<div class="container">
-							<div class="carousel-caption">
-								<h1>Westboro Magic League</h1>
-								<p>1v1 Elder Dragon Highlander using the French Banlist</p>
-							</div>
+		</div>
+		<div id="bannerCarousel" class="carousel slide" data-ride="carousel">
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					<img class="first-slide" src="../assets/images/mtgcardback.jpg" alt="First slide">
+					<div class="container">
+						<div class="carousel-caption">
+							<h1>Westboro Magic League</h1>
+							<p>1v1 Elder Dragon Highlander using the French Banlist</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="container">
-				<h2>Standings</h2>
-				<div class="col-xs-12 col-sm-4">
+		</div>
+		<div class="container">
+			<h2>Standings</h2>
+			<ul class="nav nav-tabs" role="tablist">
+				<li role="presentation" class="active"><a href="#current" aria-controls="current" role="tab" data-toggle="tab">Current Season</a></li>
+				<li role="presentation"><a href="#lifetime" aria-controls="lifetime" role="tab" data-toggle="tab">Lifetime</a></li>
+			</ul>
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane active" id="current">
 				</div>
-				<div class="col-xs-12 col-sm-4">
-				</div>
-				<div class="col-xs-12 col-sm-4">
-
+				<div role="tabpanel" class="tab-pane active" id="lifetime">
 				</div>
 			</div>
-			<script src="../lib/jquery/jquery-2.2.3.min.js"></script>
-			<script src="../lib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
-		</body>
+		</div>
+		<script src="../lib/jquery/jquery-2.2.3.min.js"></script>
+		<script src="../lib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+		<script src="../lib/dataTables/js/jquery.dataTables.min.js"></script>
+		<script src="../lib/dataTables/js/dataTables.bootstrap.min.js"></script>
+		<script>
+			var data;
+			$.ajax({
+				data: data,
+				dataType: "xml",
+				url: "../assets/xml/standings.xml"
+			}).done(function (data) {
+				console.log(data);
+			});
+		</script>
+	</body>
 </html>

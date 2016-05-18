@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<Standings>
+  <Team Name="Reardon, Justin" MatchPoints="9" LeaguePoints="4" LeagueTotal="13" FirstPlaceFinishes="1" />
+  <Team Name="Nugyen, Thanh" MatchPoints="9" LeaguePoints="4" LeagueTotal="13" FirstPlaceFinishes="0" />
+  <Team Name="Labelle, Gilles" MatchPoints="6" LeaguePoints="1" LeagueTotal="7" FirstPlaceFinishes="0" />
+  <Team Name="Heersink, Samuel" MatchPoints="6" LeaguePoints="1" LeagueTotal="7" FirstPlaceFinishes="0" />
+  <Team Name="Ciarroni, Steven" MatchPoints="6" LeaguePoints="1" LeagueTotal="7" FirstPlaceFinishes="0" />
+  <Team Name="Langlois, Derek" MatchPoints="6" LeaguePoints="1" LeagueTotal="7" FirstPlaceFinishes="0" />
+  <Team Name="Lawrence, Aaron" MatchPoints="6" LeaguePoints="1" LeagueTotal="7" FirstPlaceFinishes="0" />
+  <Team Name="St. Pierre, Jeff" MatchPoints="3" LeaguePoints="1" LeagueTotal="4" FirstPlaceFinishes="0" />
+  <Team Name="Sirman, Nick" MatchPoints="3" LeaguePoints="1" LeagueTotal="4" FirstPlaceFinishes="0" />
+  <Team Name="Dinardo, Chris" MatchPoints="3" LeaguePoints="1" LeagueTotal="4" FirstPlaceFinishes="0" />
+  <Team Name="Sivaneswaran, Jeremy" MatchPoints="3" LeaguePoints="1" LeagueTotal="4" FirstPlaceFinishes="0" />
+  <Team Name="Larabie, Matthew" MatchPoints="3" LeaguePoints="1" LeagueTotal="4" FirstPlaceFinishes="0" />
+  <Team Name="Wong, Michael" MatchPoints="0" LeaguePoints="1" LeagueTotal="1" FirstPlaceFinishes="0" />
+  <Team Name="Holicka, Martin" MatchPoints="0" LeaguePoints="1" LeagueTotal="1" FirstPlaceFinishes="0" />
+</Standings>
