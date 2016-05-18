@@ -190,8 +190,7 @@
 				console.log(name + "Table");
 				console.log($("#" + name + "Table"));
 				console.log(data);
-				currentTable.destroy();
-				/*
+				//currentTable.destroy();
 				currentTable = $("#currentTable").DataTable({
 					columns: [
 						{ data: "name" },
@@ -202,6 +201,7 @@
 					],
 					data: data,
 					dataType: "json",
+					destroy: true,
 					order: [[ 4, "desc" ]]
 				});
 				*/
