@@ -91,12 +91,12 @@
 		<script src="../lib/dataTables/js/jquery.dataTables.min.js"></script>
 		<script src="../lib/dataTables/js/dataTables.bootstrap.min.js"></script>
 		<script>
-			var data, standings;
-			var current = [];
+			var data, standingsCurrent, standingsLifetime, spent;
+			var currentData = [];
 			var currentExists = false;
-			var lifetime = [];
+			var lifetimeData = [];
 			var lifetimeExists = false;
-			var spent = [];
+			var spentData = [];
 			var spentExists = false;
 			
 			var currentTable = $("#currentTable").DataTable({
@@ -109,45 +109,42 @@
 				paging: false
 			});
 			
-			/*
 			if (localStorage.getItem("current") !== null) {
 				currentExists = true;
+				currentData = JSON.parse(localStorage.getItem("current")); 
+				buildCurrent(currentData);
+			}
+			
+			if (localStorage.getItem("spent") !== null) {
+				spentExists = true;
+				spent = JSON.parse(localStorage.getItem("current"));
 			}
 
 			if (localStorage.getItem("lifetime") !== null) {
 				lifetimeExists = true;
+				lifetimeData = JSON.parse(localStorage.getItem("lifetime")); 
+				buildLifetime(lifetimeData);
 			}
-
-			if (localStorage.getItem("spent") !== null) {
-				spentExists = true;
-			}
-
-			if (currentExists) {
-				buildTable("current", JSON.parse(localStorage.getItem("current")));
-			}
-
-			if (lifetimeExists) {
-				buildTable("lifetime", JSON.parse(localStorage.getItem("lifetime")));
-			}
-
+			
 			$.ajax({
 				data: data,
 				dataType: "xml",
 				url: "../assets/xml/standings.xml"
 			}).done(function (data) {
-				standings = data.getElementsByTagName("Team");
+				currentData = [];
+				standingsCurrent = data.getElementsByTagName("Team");
 				for (var i = 0; i < standings.length; i++) {
-					current.push({
-						"name": $(standings[i]).attr("Name"),
-						"matchPoints": $(standings[i]).attr("MatchPoints"),
-						"leaguePoints": $(standings[i]).attr("LeaguePoints"),
-						"leagueTotal": $(standings[i]).attr("LeagueTotal"),
-						"firstPlaceFinishes": $(standings[i]).attr("FirstPlaceFinishes")
+					currentData.push({
+						"name": $(standingsCurrent[i]).attr("Name"),
+						"matchPoints": $(standingsCurrent[i]).attr("MatchPoints"),
+						"leaguePoints": $(standingsCurrent[i]).attr("LeaguePoints"),
+						"leagueTotal": $(standingsCurrent[i]).attr("LeagueTotal"),
+						"firstPlaceFinishes": $(standingsCurrent[i]).attr("FirstPlaceFinishes")
 					});
 				}
-				localStorage.setItem("current", JSON.stringify(current));
-				buildTable("current", current);
-				console.log(standings);
+				localStorage.setItem("current", JSON.stringify(currentData));
+				buildCurrent(currentData);
+				console.log(currentData);
 			});
 
 			$.ajax({
@@ -155,19 +152,20 @@
 				dataType: "xml",
 				url: "../assets/xml/lifetime.xml"
 			}).done(function (data) {
-				standings = data.getElementsByTagName("Team");
+				lifetimeData = [];
+				standingsLifetime = data.getElementsByTagName("Team");
 				for (var i = 0; i < standings.length; i++) {
-					lifetime.push({
-						"name": $(standings[i]).attr("Name"),
-						"matchPoints": $(standings[i]).attr("MatchPoints"),
-						"leaguePoints": $(standings[i]).attr("LeaguePoints"),
-						"leagueTotal": $(standings[i]).attr("LeagueTotal"),
-						"firstPlaceFinishes": $(standings[i]).attr("FirstPlaceFinishes")
+					lifetimeData.push({
+						"name": $(standingsLifetime[i]).attr("Name"),
+						"matchPoints": $(standingsLifetime[i]).attr("MatchPoints"),
+						"leaguePoints": $(standingsLifetime[i]).attr("LeaguePoints"),
+						"leagueTotal": $(standingsLifetime[i]).attr("LeagueTotal"),
+						"firstPlaceFinishes": $(standingsLifetime[i]).attr("FirstPlaceFinishes")
 					});
 				}
-				localStorage.setItem("lifetime", JSON.stringify(lifetime));
-				buildTable("lifetime", lifetime);
-				console.log(lifetime);
+				localStorage.setItem("lifetime", JSON.stringify(lifetimeData));
+				buildLifetime(lifetimeData);
+				console.log(lifetimeData);
 			});
 
 			$.ajax({
@@ -175,25 +173,25 @@
 				dataType: "xml",
 				url: "../assets/xml/spent.xml"
 			}).done(function (data) {
-				standings = data.getElementsByTagName("Team");
-				for (var i = 0; i < standings.length; i++) {
-					lifetime.push({
-						"name": $(standings[i]).attr("Name"),
-						"spentPoints": $(standings[i]).attr("SpentPoints")
+				spentData = [];
+				spent = data.getElementsByTagName("Team");
+				for (var i = 0; i < spent.length; i++) {
+					spentData.push({
+						"name": $(spent[i]).attr("Name"),
+						"spentPoints": $(spent[i]).attr("SpentPoints")
 					});
 				}
-				localStorage.setItem("spent", JSON.stringify(spent));
-				buildTable("lifetime", lifetime);
-				console.log(spent);
+				localStorage.setItem("spent", JSON.stringify(spentData));
+				buildTable(lifetimeData);
+				console.log(spentData);
 			});
 
-			function buildTable(name, data) {
+			function buildCurrent(data) {
 				console.log(name + "Table");
 				console.log($("#" + name + "Table"));
 				console.log(data);
-				$("#" + name + "Table").destory();
-				$("#" + name).append(currentTable);
-				$("#" + name + "Table").DataTable({
+				currentTable.destroy();
+				currentTable.DataTable({
 					columns: [
 						{ data: "name" },
 						{ data: "matchPoints" },
@@ -205,6 +203,10 @@
 					dataType: "json",
 					order: [[ 4, "desc" ]]
 				});
+			}
+			
+			function buildLifetime(data) {
+				
 			}
 			*/
 		</script>
