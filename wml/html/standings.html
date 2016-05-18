@@ -98,19 +98,7 @@
 			var lifetimeExists = false;
 			var spentData = [];
 			var spentExists = false;
-			
-			/*
-			var currentTable = $("#currentTable").DataTable({
-				order: [[ 4, "desc" ]],
-				paging: false
-			});
-			
-			var lifetimeTable = $("#lifetimeTable").DataTable({
-				order: [[ 4, "desc" ]],
-				paging: false
-			});
-			*/
-			
+
 			if (localStorage.getItem("current") !== null) {
 				currentExists = true;
 				currentData = JSON.parse(localStorage.getItem("current")); 
@@ -144,7 +132,6 @@
 				}
 				localStorage.setItem("current", JSON.stringify(currentData));
 				buildCurrent(currentData);
-				console.log(currentData);
 			}).fail(function () {
 				if (currentExists) {
 					buildCurrent(currentData);	
@@ -169,7 +156,6 @@
 				}
 				localStorage.setItem("lifetime", JSON.stringify(lifetimeData));
 				buildLifetime(lifetimeData);
-				console.log(lifetimeData);
 			}).fail(function () {
 				if(!lifetimeExists){
 					if(currentExists){
@@ -194,7 +180,6 @@
 				}
 				localStorage.setItem("spent", JSON.stringify(spentData));
 				buildTable(lifetimeData);
-				console.log(spentData);
 			});
 
 			function buildCurrent(data) {
