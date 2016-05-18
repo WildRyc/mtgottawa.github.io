@@ -93,22 +93,22 @@
 			var spentExists = false;
 
 			if (localStorage.getItem("current") !== null) {
-				current = true;
+				currentExists = true;
 			}
 
 			if (localStorage.getItem("lifetime") !== null) {
-				lifetime = true;
+				lifetimeExists = true;
 			}
 
 			if (localStorage.getItem("spent") !== null) {
-				spent = true;
+				spentExists = true;
 			}
 
-			if (current) {
+			if (currentExists) {
 				buildTable("current", JSON.parse(localStorage.getItem("current")));
 			}
 
-			if (lifetime) {
+			if (lifetimeExists) {
 				buildTable("lifetime", JSON.parse(localStorage.getItem("lifetime")));
 			}
 
@@ -175,6 +175,7 @@
 				console.log(data);
 				$("#" + name + "Table").DataTable({
 					data: data
+
 				});
 			}
 		</script>
