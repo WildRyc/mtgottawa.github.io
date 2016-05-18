@@ -91,10 +91,17 @@
 			var lifetimeExists = false;
 			var spent = [];
 			var spentExists = false;
-
-			var currentTable = $("#currentTable");
-			var lifetimeTable = $("#lifetimeTable");
-
+			
+			var currentTable = $("#currentTable").DataTable({
+				paging: false;
+				order: [[ 4, "desc" ]]
+			});
+			
+			var lifetimeTable = $("#lifetimeTable").DataTable({
+				paging: false;
+				order: [[ 4, "desc" ]]
+			});
+			/*
 			if (localStorage.getItem("current") !== null) {
 				currentExists = true;
 			}
@@ -191,6 +198,7 @@
 					order: [[ 4, "desc" ]]
 				});
 			}
+			*/
 		</script>
 	</body>
 </html>
