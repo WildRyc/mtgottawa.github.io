@@ -175,6 +175,7 @@
 				console.log(data);
 				$("#" + name + "Table").DataTable({
 					data: data,
+					dataType: "json",
 					columns: [
 						{ data: "name" },
 						{ data: "matchPoints" },
