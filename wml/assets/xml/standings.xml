@@ -1,17 +1,28 @@
 <?xml version="1.0"?>
 <Standings>
-  <Team Name="Reardon, Justin" MatchPoints="9" LeaguePoints="4" LeagueTotal="13" FirstPlaceFinishes="1" />
-  <Team Name="Nugyen, Thanh" MatchPoints="9" LeaguePoints="4" LeagueTotal="13" FirstPlaceFinishes="0" />
-  <Team Name="Labelle, Gilles" MatchPoints="6" LeaguePoints="1" LeagueTotal="7" FirstPlaceFinishes="0" />
+  <Team Name="Reardon, Justin" MatchPoints="41" LeaguePoints="11" LeagueTotal="52" FirstPlaceFinishes="2" />
+  <Team Name="Nugyen, Thanh" MatchPoints="24" LeaguePoints="8" LeagueTotal="32" FirstPlaceFinishes="0" />
+  <Team Name="Labelle, Gilles" MatchPoints="43" LeaguePoints="10" LeagueTotal="53" FirstPlaceFinishes="0" />
   <Team Name="Heersink, Samuel" MatchPoints="6" LeaguePoints="1" LeagueTotal="7" FirstPlaceFinishes="0" />
-  <Team Name="Ciarroni, Steven" MatchPoints="6" LeaguePoints="1" LeagueTotal="7" FirstPlaceFinishes="0" />
-  <Team Name="Langlois, Derek" MatchPoints="6" LeaguePoints="1" LeagueTotal="7" FirstPlaceFinishes="0" />
-  <Team Name="Lawrence, Aaron" MatchPoints="6" LeaguePoints="1" LeagueTotal="7" FirstPlaceFinishes="0" />
-  <Team Name="St. Pierre, Jeff" MatchPoints="3" LeaguePoints="1" LeagueTotal="4" FirstPlaceFinishes="0" />
-  <Team Name="Sirman, Nick" MatchPoints="3" LeaguePoints="1" LeagueTotal="4" FirstPlaceFinishes="0" />
-  <Team Name="Dinardo, Chris" MatchPoints="3" LeaguePoints="1" LeagueTotal="4" FirstPlaceFinishes="0" />
-  <Team Name="Sivaneswaran, Jeremy" MatchPoints="3" LeaguePoints="1" LeagueTotal="4" FirstPlaceFinishes="0" />
+  <Team Name="Ciarroni, Steven" MatchPoints="15" LeaguePoints="5" LeagueTotal="20" FirstPlaceFinishes="0" />
+  <Team Name="Langlois, Derek" MatchPoints="43" LeaguePoints="11" LeagueTotal="54" FirstPlaceFinishes="0" />
+  <Team Name="Lawrence, Aaron" MatchPoints="56" LeaguePoints="13" LeagueTotal="69" FirstPlaceFinishes="3" />
+  <Team Name="St. Pierre, Jeff" MatchPoints="28" LeaguePoints="6" LeagueTotal="34" FirstPlaceFinishes="0" />
+  <Team Name="Sirman, Nick" MatchPoints="9" LeaguePoints="4" LeagueTotal="13" FirstPlaceFinishes="0" />
+  <Team Name="Dinardo, Chris" MatchPoints="11" LeaguePoints="4" LeagueTotal="15" FirstPlaceFinishes="0" />
+  <Team Name="Sivaneswaran, Jeremy" MatchPoints="49" LeaguePoints="15" LeagueTotal="64" FirstPlaceFinishes="2" />
   <Team Name="Larabie, Matthew" MatchPoints="3" LeaguePoints="1" LeagueTotal="4" FirstPlaceFinishes="0" />
-  <Team Name="Wong, Michael" MatchPoints="0" LeaguePoints="1" LeagueTotal="1" FirstPlaceFinishes="0" />
+  <Team Name="Wong, Michael" MatchPoints="12" LeaguePoints="3" LeagueTotal="15" FirstPlaceFinishes="0" />
   <Team Name="Holicka, Martin" MatchPoints="0" LeaguePoints="1" LeagueTotal="1" FirstPlaceFinishes="0" />
+  <Team Name="Tierney, Greg" MatchPoints="22" LeaguePoints="4" LeagueTotal="26" FirstPlaceFinishes="0" />
+  <Team Name="Luong, Linh" MatchPoints="3" LeaguePoints="2" LeagueTotal="5" FirstPlaceFinishes="0" />
+  <Team Name="Pollard, Brent" MatchPoints="9" LeaguePoints="3" LeagueTotal="12" FirstPlaceFinishes="1" />
+  <Team Name="Larking, James" MatchPoints="27" LeaguePoints="5" LeagueTotal="32" FirstPlaceFinishes="1" />
+  <Team Name="Hagadorn, Samuel" MatchPoints="7" LeaguePoints="2" LeagueTotal="9" FirstPlaceFinishes="0" />
+  <Team Name="Whalley, Matthew" MatchPoints="1" LeaguePoints="1" LeagueTotal="2" FirstPlaceFinishes="0" />
+  <Team Name="Ryc, Kyle" MatchPoints="6" LeaguePoints="1" LeagueTotal="7" FirstPlaceFinishes="0" />
+  <Team Name="Shrestha, Bishwa" MatchPoints="3" LeaguePoints="1" LeagueTotal="4" FirstPlaceFinishes="0" />
+  <Team Name="Measures, Jeff" MatchPoints="1" LeaguePoints="1" LeagueTotal="2" FirstPlaceFinishes="0" />
+  <Team Name="Mantha, Andrew" MatchPoints="9" LeaguePoints="3" LeagueTotal="12" FirstPlaceFinishes="0" />
+  <Team Name="Oake, Chris" MatchPoints="3" LeaguePoints="1" LeagueTotal="4" FirstPlaceFinishes="0" />
 </Standings>
